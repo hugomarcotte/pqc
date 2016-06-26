@@ -11,12 +11,12 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
-gem 'bourbon'
+gem 'bourbon', github: 'thoughtbot/bourbon'
+gem 'neat'
+gem 'normalize-rails', '~> 3.0.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -34,7 +34,10 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
+  # gem 'byebug', platform: :mri
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'awesome_print'
 end
 
 group :development do
@@ -44,6 +47,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'quiet_assets'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
