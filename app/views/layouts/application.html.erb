@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Politiqc</title>
-    <%= csrf_meta_tags %>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag  :application, media: 'all', 'data-turbolinks-track': 'reload' %>
+    <title>My site</title>
+    <%= csrf_meta_tags %>
   </head>
 
   <body>
-    <%= render partial: '/flashes' %>
+    <%= render 'flashes' %>
     <%= yield %>
+    <%= render 'javascript' %>
+    <%= render 'css_overrides' %>
   </body>
 </html>
